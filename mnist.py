@@ -1,7 +1,8 @@
 import os
+
 import numpy as np
-from prometheus_client import Enum
 import torch
+from prometheus_client import Enum
 from pytorch_lightning import LightningModule, Trainer
 from torch import nn
 from torch.nn import functional as F
@@ -10,7 +11,6 @@ from torchmetrics import Accuracy
 from torchvision import transforms
 from torchvision.datasets import MNIST
 from tqdm import tqdm
-
 
 PATH_DATASETS = os.environ.get("PATH_DATASETS", ".")
 AVAIL_GPUS = min(1, torch.cuda.device_count())
